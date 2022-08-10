@@ -11,6 +11,7 @@ body{
 }
 
 header{
+    background-color: #0b0f19;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,77 +84,119 @@ header nav div{
     background-color: #5900ff;
 }
 
-.wallpapernav{
+
+
+
+
+.navdasnavs1{
+    color: white;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 75vh;
-    background-image: url(/images/wp6425178.jpg);
+    height: 80vh;
 }
 
-.wallpapernav h1{
+.nav_1{
     display: flex;
     justify-content: center;
-    font-size: 30pt;
-    color: white;
-}
-
-.wallpapernav h2{
-    opacity: 75%;
-    font-size: 12pt;
-    color: white;
-}
-
-
-
-.acervo{
-    display: flex;
-    justify-content: center;
-    color: white;
-    width: 100%;
-    height: 500px;
-}
-
-.acervo nav{
-    padding: 50px;
-    width: 33.3%;
-    height: 550px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+.nav_1 h1{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    font-size: 15pt;
 }
 
 .divimg{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid rgba(255, 255, 255, 0.192);
-    width: 300px;
-    height: 650px;
-    margin-bottom: 25px;
-    border-radius: 5px;
+    background-image: url(/images/wp6425178.jpg);
+    border: 1px solid white;
+    width: 250px;
+    height: 350px;
 }
 
-.acervo nav h1{
+.nav_2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 75%;
+}
+
+.nav_2 h1{
+    font-size: 22pt;
+}
+
+.nav_2 h2{
+    font-size: 15pt;
+    margin-bottom: 50px;
+}
+
+.nav_2 p{
+    font-size: 5;
+}
+
+.nav_2_1{
+    padding: 80px;
+}
+
+
+
+
+.nav2_3{
+    background-color: #10141d;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    height: 80px;
+    margin-left: 7.5%;
+}
+
+.navesp{
+    background-color: #181c24;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98.8%;
+    height: 50%;
+}
+
+.navop{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: center;
+}
+
+.divop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.divop div{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     float: center;
-    margin-bottom: 25px;
+    border-left: 1px solid rgba(255, 255, 255, 0.199);;
+    border-right: 1px solid rgba(255, 255, 255, 0.199);;
 }
 
-#btn-vizualizar{
-    padding: 10px;
-    font-size: 12pt;
-    color: white;
-    text-decoration: none;
-    background-color: #5900ff;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-#btn-vizualizar:hover{
-    background-color: #262779;
+.nav2_3 div{
+    display: flex;
+    justify-content: center;
 }
