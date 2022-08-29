@@ -1,29 +1,40 @@
 <?php
+    include('config.php');
 
-    if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']))
+    if(isset($_POST['email']) || isset($_POST['senha']))
     {
-
-        include('config.php');
-
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-
-        $sql = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$senha'"
+        if(strlen($_POST['email']) == 0)
+        {
+            echo "Digite seu email!";
+        } else if(strlen($_POST['senha']) == 0){
+            echo "Digite sua senha!";
+        } else{
+            $email = $conexao->real_escape_string($_POST['email']);
+            $senha = $conexao->real_escape_string($_POST['senha']);
         
-        $result =  $conexao->query($sql);
+            $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
+            $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+        
+            $quantidade = $sql_query->num_rows;
 
-        if(mysqli_num_rows($result) < 1)
-        {
-             print_r('Não existe!');
+            if($quantidade == 1)
+            {
+                $user = $sql_query->fetch_assoc();
+
+                if(!isset($_SESSION))
+                {
+                    session_start();
+                }
+
+                $_SESSION['nome'] = $usuario['rm'];
+                $_SESSION['nome'] = $usuario['nome'];
+
+                header('location: home.php');
+                
+            } else{
+                echo "Falha ao logar. E-mail e/ou senha incorretos!";
+            }
         }
-        else
-        {
-            print_r('Existe');
-        }
-    }
-    else
-    {
-        header('location: login.php');
     }
 ?>
 
@@ -50,6 +61,7 @@
         </nav>
         <nav class="nav2">
             <div class="div1">
+                <form method="POST">
                 <section>
                     <h1>Bem-vindo de volta</h1>
                 </section>
@@ -68,8 +80,9 @@
                     <a style="color: blue; margin-top: 10px; display: flex; justify-content: flex-start; padding-bottom: 10px; font-size: 10pt;" href="#">Recuperar senha</a>
                 </section>
                 <div class="div2">
-                    <a href="home.html">Entrar</a>
+                    <button type="submit" name="submit">Entrar</button>
                 </section>
+                </form>
             </div>
             </div>
         </nav>

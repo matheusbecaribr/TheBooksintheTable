@@ -83,6 +83,23 @@ header nav div{
     background-color: #5900ff;
 }
 
+#sair{
+    padding: 10px;
+    font-size: 10pt;
+    background-color: #262779;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    float: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#sair:hover{
+    background-color: #5900ff;
+}
+
 .wallpapernav{
     display: flex;
     justify-content: center;
