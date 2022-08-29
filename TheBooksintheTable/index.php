@@ -24,13 +24,11 @@
                 if(!isset($_SESSION))
                 {
                     session_start();
+                    $_SESSION['email'] = $_POST['email'];
                 }
 
-                $_SESSION['nome'] = $usuario['rm'];
-                $_SESSION['nome'] = $usuario['nome'];
 
                 header('location: home.php');
-                
             } else{
                 echo "Falha ao logar. E-mail e/ou senha incorretos!";
             }
