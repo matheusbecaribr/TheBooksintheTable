@@ -31,7 +31,7 @@
                 <a id="entrar" href="index.html">Entrar</a>
             </div>
             <div>
-                <a id="criarconta" href="register.html">Criar conta</a>
+                <a id="criarconta" href="register.php">Criar conta</a>
             </div>
             <div>
                 <a id="sair" href="logout.php">Sair</a>
