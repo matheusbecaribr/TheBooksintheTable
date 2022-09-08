@@ -28,29 +28,6 @@ header nav div{
     padding: 30px;
 }
 
-#inicio{
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-#inicio:hover{
-    color: #4044ee;
-}
-
-#entrar{
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    background-color: #5900ff;
-    transition: 0.3s;
-}
-
-#entrar:hover{
-    background-color: #262779;
-}
-
 .navdasnavs{
     z-index: 1;
     display: flex;
@@ -59,7 +36,6 @@ header nav div{
 }
 
 .nav1{
-    z-index: 2;
     display: flex;
     justify-content: flex-start;
     width: 50%;
@@ -77,11 +53,6 @@ header nav div{
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 100%;
-}
-
-.form{
-    width: 100%;
     height: 100%;
 }
 
@@ -164,15 +135,6 @@ label{
     font-size: 10pt;
     color: rgb(201, 201, 201);
     margin-bottom: 15px;
-}
-
-#checkboxinput{
-    margin-right: 10px;
-    margin-bottom: 0px;
-}
-
-select{
-    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1200px) {
