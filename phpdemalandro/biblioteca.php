@@ -1,30 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@gguisales 
-Beazika
-/
-TheBooksintheTable
-Public
-forked from gguisales/TheBooksintheTable
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-TheBooksintheTable/TheBooksintheTable/biblioteca.php /
-@Beazika
-Beazika uptade porra
-Latest commit eb494b4 5 minutes ago
- History
- 1 contributor
-106 lines (105 sloc)  3.28 KB
+
 
 <?php
   $user = 'root';
