@@ -1,9 +1,22 @@
+<?php
+
+    session_start();
+        
+    $prot = $_SESSION['email'];
+
+    if(!isset($prot)){
+        header('location: index.php');
+    } else{
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="registerstyle.css">
-    <title>Criar Conta</title>
+    <title>Deletar Usuario</title>
 </head>
 <style>
 
@@ -60,7 +73,7 @@
     <header>
         <nav>
             <div>
-                <a id="entrar" href="index.php">Entrar</a>
+                <a id="buttonmenu" href="home.php">Home</a>
             </div>
         </nav>
     </header>
@@ -78,10 +91,10 @@
                 </section>
                 <section>
                     <h3>Rm: </h3>
-                    <input type="text" name="nome" id="nome">
+                    <input type="number" name="rm" id="rm">
                 </section>
                 <section>
-                    <button id="buttondelete" name="excluir">Excluir</button>
+                    <input type="submit" id="buttondelete" name="excluir" value="Excluir">
                 </section>
             </div>
             </div>
@@ -100,7 +113,7 @@
         if(isset($_POST['excluir']))
         {
 
-            $resultado = ExcluirUsuario($_POST['excluirUsuario']);
+            $resultado = ExcluirUsuario($_POST['rm']);
 
         }else{
 

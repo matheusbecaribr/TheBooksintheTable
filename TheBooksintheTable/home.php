@@ -27,14 +27,14 @@
             <div id="config">
                 <a onclick="" href="#">Config</a>
             </div>
-            <div>
-                <a id="entrar" href="index.html">Entrar</a>
+            <div id="config">
+                <a href="register.php">Criar conta</a>
             </div>
-            <div>
-                <a id="criarconta" href="register.php">Criar conta</a>
+            <div id="config">
+                <a href="cadastrolivro.php">Cadastrar Livro</a>
             </div>
-            <div>
-                <a id="sair" href="logout.php">Sair</a>
+            <div id="config">
+                <a href="logout.php">Sair</a>
             </div>
         </nav>
     </header>

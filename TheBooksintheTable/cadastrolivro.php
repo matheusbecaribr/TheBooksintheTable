@@ -16,12 +16,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="registerstyle.css">
-    <title>Criar Conta</title>
+    <title>Cadastro Livro</title>
 </head>
 <style>
 
     .nav2{
-        padding-top: 10rem;
+        padding-top: 12rem;
         padding-bottom: 12rem;
     }
 
@@ -63,6 +63,10 @@
         font-size: 12pt;
     }
     
+    .dive{
+        width: 100%;
+    }
+    
     #criar{
         padding: 15px;
     }
@@ -76,7 +80,6 @@
         text-decoration: none;
         background-color: #5900ff;
         transition: 0.3s;
-        margin-bottom: rem;
     }
 
     #buttoncriar:hover{
@@ -88,11 +91,17 @@
     }
     
     input{
-        margin-bottom: none;
         padding: 6px;
         width: 30rem;
     }
-
+    
+    textarea{
+        color: white;
+        padding: none;
+        background-color: #10141d;
+        border: 1px solid rgb(100, 100, 100);
+        border-radius: 5px;
+    }
 </style>
 <body>
     <header>
@@ -100,60 +109,53 @@
             <div>
                 <a id="buttonmenu" href="home.php">Home</a>
             </div>
-            <div>
-                <a id="buttonmenu" href="deleteuser.php">Excluir usuário</a>
-            </div>
         </nav>
     </header>
     <nav class="navdasnavs">
         <nav class="nav1">
             <div>
-                <h1>cadastro<br>de<br>usuário</h1>
+                <h1>cadastro<br>de<br>livro</h1>
             </div>
         </nav>
         <nav class="nav2">
         <form action="" method="POST" class="form" name="form ">
             <div class="div1">
                 <section>
-                    <div class="dive">
-                        <h3>Rm: </h3>
-                        <input type="text" name="rm" id="rm">
-                    </div>
-                    <div class="dive">
-                        <h3>Nome:</h3>
-                        <input type="text" name="nome" id="nome">
-                    </div>
+                        <h3>Título: </h3>
+                        <input type="text" name="titulo" id="titulo">
                 </section>
                 <section>
-                    <div class="dive">
-                        <h3>Email:</h3>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="dive">
-                        <h3>Senha:</h3>
-                        <input type="password" name="senha" id="senha">
-                    </div>
+                        <h3>Ano:</h3>
+                        <input type="number" name="ano" id="ano">
                 </section>
                 <section>
-                    <div class="dive">
-                        <h3>Data:</h3>
-                        <input type="date" name="dt_nascimento" id="dt_nascimento">
-                    </div>
-                    <div class="dive">
-                        <h3>Telefone:</h3>
-                        <input type="number" name="telefone" id="telefone">
-                    </div>
+                        <h3>Quantidade:</h3>
+                        <input type="number" name="qtd" id="qtd">
                 </section>
                 <section>
-                    <h3>Status do usuario: </h3>
-                    <input type="text" name="userStatus" id="userStatus">
+                        <h3>Sinopse:</h3>
+                        <textarea class="input" name="sinopse" id="sinopse">
+                        </textarea>
                 </section>
                 <section>
-                    <h3>Administrador: </h3>
-                    <select name="adm" id="adm">
-                        <option value="0">Não</option>
-                        <option value="1">Sim</option>
-                    </select>
+                        <h3>Classificação:</h3>
+                        <input type="number" name="classificacao" id="classificacao">
+                </section>
+                <section>
+                        <h3>Estado:</h3>
+                        <input type="text" name="estado" id="estado">
+                </section>
+                <section>
+                        <h3>ID Gênero:</h3>
+                        <input type="number" name="id_genero" id="id_genero">
+                </section>
+                <section>
+                    <h3>ID Editora: </h3>
+                    <input type="number" name="id_editora" id="id_editora">
+                </section>
+                <section>
+                    <h3>Selecionar Imagem da Capa:</h3>
+                    <input type="file" name="capa" id="capa">
                 </section>
                 <section>
                 <div class="div2">
@@ -173,7 +175,7 @@
 
     if($_POST)
     {
-        if(isset($_POST['usuario']))
+        if(isset($_POST['']))
         {
 
             $resultado = cadastrarUsuario($_POST['rm'],$_POST['nome'],$_POST['email'],$_POST['dt_nascimento'],$_POST['telefone'],$_POST['senha'],$_POST['userStatus'],$_POST['adm']);
